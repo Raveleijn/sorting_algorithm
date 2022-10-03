@@ -1,7 +1,9 @@
 from randomListGenerator import *
 from heapsort import *
 
-for i in range(1):
+sort  = input('heapsort, bubblesort, mergesort')
+if sort == heapsort:
+  for i in range(1):
   randoml = randomList(10,0,9)
   print(randoml)
   Heapify(randoml)
@@ -9,3 +11,4 @@ for i in range(1):
   SortHeap(randoml)
   print(randoml)
   print(str(i)+': '+str(TestSorted(randoml)))
+
