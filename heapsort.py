@@ -65,15 +65,3 @@ def TestSorted(list):
   return sorted
     
 
-for i in range(100):
-  randoml = randomList(100,0,99)
-  Heapify(randoml)
-  SortHeap(randoml)
-  print(TestSorted(randoml))
-
-
-  
-      
-      
-    
-    
