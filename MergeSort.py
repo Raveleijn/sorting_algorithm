@@ -1,6 +1,7 @@
 #we gaan hier een algoritme maken dat eenllijst sorteert met de methode van merge sort
 
 #Hier maken we gebruik van een recursieve functie om te blijven spitten en daarna mergen totdat de lijst helemaal gesorteerd is
+
 def mergesort(List):
     if (len(List) > 16):
         return

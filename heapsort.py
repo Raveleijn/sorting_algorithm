@@ -3,6 +3,11 @@ import math
 from randomListGenerator import *
 
 
+def HeapSort(list):
+  Heapify(list)
+  SortHeap(list)
+  return list
+
 def Heapify(list):
   for i in range(len(list)):
     Sieve(list, len(list)-i-1, len(list))
