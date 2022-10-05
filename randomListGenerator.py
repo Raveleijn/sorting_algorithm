@@ -1,7 +1,7 @@
 #import the random library
 import random
 
-def randomList(size=10000, min=0, max=9999):
+def RandomList(size=10000, min=0, max=9999):
   numbersLeft = list(range(min, max+1))                      #creates a list of numbers to choose from
   randList = []                                              #the list we're going to add ranodm values to
   for i in range(size):

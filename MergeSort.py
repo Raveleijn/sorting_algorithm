@@ -1,5 +1,6 @@
 #we gaan hier een algoritme maken dat eenllijst sorteert met de methode van merge sort
 
+
 def mergesort(List):
     if (len(List) > 16):
         return
