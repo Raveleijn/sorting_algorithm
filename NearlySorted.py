@@ -11,5 +11,3 @@ while len(NearlySortedLijst) < 10000:
   Minimum += randrange(1,10)
   NearlySortedLijst.append(Minimum)
   NearlySortedLijst.append(Minimum + randrange(-10,10))
-
-print(NearlySortedLijst)

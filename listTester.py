@@ -4,17 +4,27 @@ from heapsort import *
 from bubblesort import *
 from MergeSort import *
 
-sort  = input('heapsort, bubblesort, mergesort? ')
+sortType  = input('What sorting algorithm do you want to use? (heapsort, bubblesort, mergesort) \n ')
+listType  = input('What list type do you want to use? (random, nearly sorted, inversed) \n ')
+length = str(input('What length? \n'))
+
+listDict = {'random': RandomList,
+            'nearly sorted': NearlySorted,
+            'inversed': invertedLijst} 
+
+list = listDict['listType'](length)
+
+
 if sort == 'heapsort':
   for i in range(1):
-    randoml = randomList(10,0,9)
-    print(randoml)
-    Heapify(randoml)
-    print(randoml)
-    print(randoml)
-    print(str(i)+': '+str(TestSorted(randoml)))
+    print(list)
+    Heapify(list)
+    print(list)
+    SortHeap(list)
+    print(list)
+    print(str(i)+': '+str(TestSorted(list)))
 if sort == 'bubblesort':
-  lijst = invertedLijst(100)
+  lijst = invertedLijst(10000)
   print(lijst)
   bubbleSort(lijst)
   print(lijst)
