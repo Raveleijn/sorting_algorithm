@@ -5,9 +5,19 @@ from bubblesort import *
 from MergeSort import *
 from InvertedLijst import *
 
-sortType  = input('What sorting algorithm do you want to use? (heapsort, bubblesort, mergesort) \n')
-listType  = input('What list type do you want to use? (random, nearly sorted, inversed) \n')
-length = int(input('What length? \n'))
+def inputCorrect(inputQuestion, secondQuestion, Condition):
+  answer = input(inputQuestion)
+  inputCorrect = Condition(answer)
+  while not inputCorrect:
+    answer = input(secondQuestion)
+    inputCorrect = Condition(answer)
+  return answer   
+
+sortType = inputCorrect('What sorting algorithm do you want to use? (heapsort, bubblesort or mergesort) \n', 'Please enter heapsort, bubblesort or mergesort \n', lambda a : a in ['heapsort', 'bubblesort', 'mergesort'])
+
+listType = inputCorrect('What list type do you want to use? (random, nearly sorted or inversed) \n', 'Please enter random, nearly sorted or inversed \n', lambda a : a in ['random', 'nearly sorted', 'inversed'])
+
+length = int(inputCorrect('What length should the list have? \n', 'Please input a non negative integer \n', lambda a : a.isdigit()))
 
 sortDict = {'heapsort': HeapSort,
             'bubblesort': bubbleSort,
@@ -24,4 +34,5 @@ print(list)
 list = sortFunc(list)
 print(list)
 print(TestSorted(list))
+
 
