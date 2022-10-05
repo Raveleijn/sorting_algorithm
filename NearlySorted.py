@@ -11,5 +11,5 @@ def NearlySorted(lengte):
     Minimum += randrange(1,10)
     NearlySortedLijst.append(Minimum)
     NearlySortedLijst.append(Minimum + randrange(-10,10))
-    return NearlySortedLijst
+  return NearlySortedLijst
 
