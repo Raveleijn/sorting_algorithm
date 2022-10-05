@@ -5,6 +5,14 @@ from bubblesort import *
 from MergeSort import *
 from InvertedLijst import *
 
+def TestSorted(list):
+  sorted = True
+  for i in range(len(list)-1):
+    if list[i]>list[i+1]:
+      sorted = False
+      break
+  return sorted
+
 def inputCorrect(inputQuestion, secondQuestion, Condition):
   answer = input(inputQuestion)
   inputCorrect = Condition(answer)

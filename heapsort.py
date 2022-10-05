@@ -61,12 +61,6 @@ def TestHeap(heap):
         break
   return correct
 
-def TestSorted(list):
-  sorted = True
-  for i in range(len(list)-1):
-    if list[i]>list[i+1]:
-      sorted = False
-      break
-  return sorted
+
     
 
