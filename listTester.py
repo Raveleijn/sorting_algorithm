@@ -1,6 +1,8 @@
 from randomListGenerator import *
+from NearlySorted import *
 from heapsort import *
 from bubblesort import *
+from MergeSort import *
 
 sort  = input('heapsort, bubblesort, mergesort? ')
 if sort == 'heapsort':
