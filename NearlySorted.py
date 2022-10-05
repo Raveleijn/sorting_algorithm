@@ -2,14 +2,15 @@
 
 from random import randrange
 
-#Dit is het beginpunt van de lijst
+#Dit is het beginpunt van de lijst, zodat de lijst geen getallen onder nul kan bevatten
 Minimum = 9
 
 # in deze code voeg ik steeds een stijgend getal toe en een getal wat random rond dat getal zit, hierdoor is de lijst altijd bijna gesorteerd, want om het getal is het al geordend.
-NearlySortedLijst = [] 
-while len(NearlySortedLijst) < 10000:
-  Minimum += randrange(1,10)
-  NearlySortedLijst.append(Minimum)
-  NearlySortedLijst.append(Minimum + randrange(-10,10))
-
-print(NearlySortedLijst)
+def NearlySorted(lengte):
+  NearlySortedLijst = []
+  Minimum = 9
+  while len(NearlySortedLijst) < lengte:
+    Minimum += randrange(1,10)
+    NearlySortedLijst.append(Minimum)
+    NearlySortedLijst.append(Minimum + randrange(-10,10))
+    return NearlySortedLijst

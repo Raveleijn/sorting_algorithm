@@ -1,17 +1,11 @@
 #we gaan hier een algoritme maken dat eenllijst sorteert met de methode van merge sort
 
-List = [3,5,7,9,1,0,1]
-
-
 def mergesort(List):
     if (len(List) > 16):
         return
-    print(len(List))
     if len(List) == 1:
         return List
-    print(List)
     ListA, ListB = splitlist(List)
-    print(ListA, ListB)
     ListASorted = mergesort(ListA)
     ListBSorted = mergesort(ListB)
     ListSorted = merge(ListASorted, ListBSorted)
@@ -48,6 +42,3 @@ def merge(ListASorted, ListBSorted):
       ListSorted.append(ListASorted[0])
       ListASorted.pop(0)
   return ListSorted
-
-
-print(mergesort(List))
