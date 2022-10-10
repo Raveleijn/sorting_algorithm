@@ -4,6 +4,7 @@ from heapsort import *
 from bubblesort import *
 from MergeSort import *
 from InvertedLijst import *
+from datetime import datetime
 
 def TestSorted(list):
   sorted = True
@@ -38,9 +39,11 @@ listDict = {'random': RandomList,
 list = listDict[listType](length)
 sortFunc = sortDict[sortType]
 
+begintijd = datetime.now()
 print(list)
 list = sortFunc(list)
 print(list)
 print(TestSorted(list))
-
-
+eindtijd = datetime.now()
+tijdsduur = eindtijd -  begintijd
+print(tijdsduur)
