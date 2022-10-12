@@ -36,15 +36,15 @@ listDict = {'random': RandomList,
             'nearly sorted': NearlySorted,
             'inversed': invertedLijst} 
 
-for i in range(100):
-  list = listDict[listType](length)
-  sortFunc = sortDict[sortType]
+
+list = listDict[listType](length)
+sortFunc = sortDict[sortType]
   
-  begintijd = datetime.now()
-  print(list)
-  list = sortFunc(list)
-  print(list)
-  print(TestSorted(list))
-  eindtijd = datetime.now()
-  tijdsduur = eindtijd -  begintijd
-  print(tijdsduur)
+begintijd = datetime.now()
+print(list)
+list = sortFunc(list)
+print(list)
+print(TestSorted(list))
+eindtijd = datetime.now()
+tijdsduur = eindtijd -  begintijd
+print(tijdsduur)
