@@ -41,10 +41,13 @@ list = listDict[listType](length)
 sortFunc = sortDict[sortType]
   
 begintijd = datetime.now()
-print(list + " Dit is de lijst die u opriep")
+print(list)
+print("Dit is de lijst die u opriep")
 list = sortFunc(list)
-print(list + " Dit is de gesorteerde lijst")
+print(list)
+print("Dit is de gesorteerde lijst")
 print(TestSorted(list))
 eindtijd = datetime.now()
 tijdsduur = eindtijd -  begintijd
-print(tijdsduur + "(zo lang duurde het om uw lijst te sorteren, uur:minuten:seconden.honderdsten")
+print(tijdsduur)
+print("(zo lang duurde het om uw lijst te sorteren, uur:minuten:seconden.honderdsten)")
