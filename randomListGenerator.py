@@ -1,14 +1,17 @@
-#import the random library
+#Importeert de benodigde library
 import random
 
-def RandomList(size=10000, minVal=0, maxVal=9999):
-  maxVal = max(size-1, maxVal)
-  numbersLeft = list(range(minVal, maxVal+1))                      #creates a list of numbers to choose from
-  randList = []                                              #the list we're going to add ranodm values to
+#genereert een random list
+def RandomList(size=10000, minVal=1, maxVal=9999):
+  #Maakt een gesorteerde list van de mogelijke waarden
+  maxVal = max(size, maxVal)
+  numbersLeft = list(range(minVal, maxVal+1))
+  randList = []
   for i in range(size):
-    randNumberIndex = random.randint(0, len(numbersLeft)-1)  #choose a random index for the new random number
-    randList.append(numbersLeft[randNumberIndex])            #add the random number from numbersLeft
-    numbersLeft.pop(randNumberIndex)                          #remove the random number from numbersLeft
+    #Kiest voor elk element in de randomlijst een random element uit de gesorteerde lijst en haalt deze weg, zodat er geen gedupliceerde elementen zijn
+    randNumberIndex = random.randint(0, len(numbersLeft)-1)
+    randList.append(numbersLeft[randNumberIndex])
+    numbersLeft.pop(randNumberIndex)
   return randList
 
   
